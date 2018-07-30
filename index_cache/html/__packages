@@ -1,0 +1,10 @@
+base
+FactoMineR
+ggplot2
+factoextra
+tidyr
+dplyr
+MASS
+reshape2
+cowplot
+bindrcpp
