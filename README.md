@@ -171,7 +171,7 @@ We can plot the PCA, using 'plot.PCA'.
 plot.PCA(pca1)
 ```
 
-![](Plotting-PCAs_files/figure-html/visualizing pca-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/visualizing%20pca-1.png)
 
 
 ## Visualizing the PCA using ggplot2
