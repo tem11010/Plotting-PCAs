@@ -194,7 +194,7 @@ circ <- circleFun(c(0,0),2,npoints = 500)
 
 Now we can make our initial plot of the PCA.
 
-```{r plot_pca}
+```{r initial_pca_plot}
 p <- ggplot(data = dat, aes(x = pc1, y = pc2)) +
   
   geom_point()

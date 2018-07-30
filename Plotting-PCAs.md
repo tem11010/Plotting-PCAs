@@ -222,7 +222,7 @@ p <- ggplot(data = dat, aes(x = pc1, y = pc2)) +
 p
 ```
 
-![](Plotting-PCAs_files/figure-html/plot_pca-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/initial_pca_plot-1.png)<!-- -->
 
 And we can customize it a bit. For example, coloring and shaping the points by cut.
 
