@@ -149,7 +149,7 @@ pca1 <- PCA(dat[ ,c("carat", "depth", "table", "price", "x", "y", "z", "clarity"
 
 We can plot the PCA, using 'plot.PCA'.
 
-```{r visualizing pca, ehco = FALSE}
+```{r visualizing_pca}
 plot.PCA(pca1)
 
 ```
