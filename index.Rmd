@@ -5,6 +5,7 @@ graphics: yes
 output: 
   html_document:
   editor_options:
+    chunk_output_type: console
   chunk_output_type: console
 ---
 
@@ -322,7 +323,7 @@ ggdraw() +
   
   draw_plot(p , 0, 0.0, 0.8, 0.8) +
   
-  draw_plot(vars.p, 0.7, 0.5, 0.3, 0.3) +
+  draw_plot(vars.p, 0.68, 0.45, 0.35, 0.35) +
   
   draw_plot_label(label = "A", x = 0, y = 0.81) + 
   
