@@ -132,20 +132,20 @@ for (i in 1:length(colnames(dat))){
 }
 
 head(dat)
-##        carat       cut color clarity       depth      table       price
-## 1 -0.1373933   Premium     F     SI2 -1.52406181  0.2285176 -0.41143822
-## 2 -0.2210705     Ideal     G    VVS1 -0.12119790 -0.2151563 -0.05381050
-## 3  1.7244228   Premium     E     VS2  0.01908849  0.2285176  2.41718522
-## 4  0.4274273   Premium     H     SI1 -2.50606655  2.0032134  0.05285477
-## 5  1.9754542     Ideal     H      I1 -0.19134109 -1.1468716  0.82169207
-## 6 -0.2001512 Very Good     G     VS2  0.93095004 -0.6588303 -0.37804302
-##             x           y           z
-## 1  0.14095136  0.10597223 -0.06124436
-## 2 -0.05583464 -0.02024553 -0.04674389
-## 3  1.62579121  1.56649203  1.59180936
-## 4  0.70447492  0.65592104  0.33026836
-## 5  1.78679793  1.82794310  1.78031548
-## 6 -0.15422764  0.01581668  0.04025894
+##        carat       cut color clarity       depth      table      price
+## 1 -0.7834181   Premium     E     VS2 -0.15268164  0.7282689 -0.7188793
+## 2 -0.8256395   Premium     F    VVS2 -0.15268164  0.7282689 -0.7264568
+## 3  0.1032313   Premium     D     SI2 -2.36804834  1.1879330 -0.1444583
+## 4 -0.2134292 Very Good     F     VS1 -0.00975476  0.7282689 -0.2674089
+## 5 -1.0156357     Ideal     G     SI1 -0.15268164 -0.1910594 -0.8254527
+## 6 -0.9945250     Ideal     E     SI2  0.27609901 -1.5700518 -0.8706731
+##            x           y           z
+## 1 -0.8011785 -0.83601589 -0.83188890
+## 2 -0.8458189 -0.90803229 -0.88947252
+## 3  0.4398237  0.42427112  0.13263666
+## 4 -0.0690765  0.01917887 -0.02571828
+## 5 -1.1761576 -1.22310405 -1.20618241
+## 6 -1.1583015 -1.15108765 -1.11980698
 ```
 
 Now the mean and standard deviation of the numerical variables should be 0 and 1 respectively.
@@ -222,7 +222,7 @@ p <- ggplot(data = dat, aes(x = pc1, y = pc2)) +
 p
 ```
 
-![](Plotting-PCAs_files/figure-html/plot pca-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/plot_pca-1.png)<!-- -->
 
 And we can customize it a bit. For example, coloring and shaping the points by cut.
 
@@ -240,7 +240,7 @@ p <- ggplot(data = dat, aes(x = pc1, y = pc2, color = cut, shape = cut)) +
 p
 ```
 
-![](Plotting-PCAs_files/figure-html/customize pca-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/customize_pca-1.png)<!-- -->
 
 We might want to change the shapes that ggplot2 is using by default, and also, for example, set the 'good' and 'very good' diamonds to have the same shape. 
 
@@ -264,7 +264,7 @@ p <- ggplot(data = dat, aes(x = pc1, y = pc2, color = cut, shape = cut)) +
 p
 ```
 
-![](Plotting-PCAs_files/figure-html/customize shapes-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/customize_shapes-1.png)<!-- -->
 
 Now the Cut categories 'good' and 'very good' have different colors, but are represented by the same shape.
 We can also add confidence ellipse, make the theme look nicer, and fix the axis labels.
@@ -336,7 +336,7 @@ vars.p <-  ggplot() +
 vars.p
 ```
 
-![](Plotting-PCAs_files/figure-html/variable contributions plot-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/variable_contributions_plot-1.png)<!-- -->
 
 And now let's put the PCA scatterplot and the variable contribution plots together using [cowplot](https://github.com/wilkelab/cowplot/blob/master/vignettes/introduction.Rmd "cowplot").
 
@@ -347,7 +347,7 @@ plot_grid(p, vars.p, rel_heights = c(1, 1.3),
           labels = c("A", "B"))
 ```
 
-![](Plotting-PCAs_files/figure-html/combined plotting-1.png)<!-- -->
+![](Plotting-PCAs_files/figure-html/combined_plotting-1.png)<!-- -->
 
 A more flexible approach to combining plots would be to use the 'ggdraw' function. We can use this to embed the variable contribution plot into the scatterplot.
 

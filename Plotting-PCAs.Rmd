@@ -194,7 +194,7 @@ circ <- circleFun(c(0,0),2,npoints = 500)
 
 Now we can make our initial plot of the PCA.
 
-```{r plot pca}
+```{r plot_pca}
 p <- ggplot(data = dat, aes(x = pc1, y = pc2)) +
   
   geom_point()
@@ -203,7 +203,7 @@ p
 
 And we can customize it a bit. For example, coloring and shaping the points by cut.
 
-```{r customize pca}
+```{r customize_pca}
 p <- ggplot(data = dat, aes(x = pc1, y = pc2, color = cut, shape = cut)) +
   
       geom_hline(yintercept = 0, lty = 2) +
@@ -219,7 +219,7 @@ p
 
 We might want to change the shapes that ggplot2 is using by default, and also, for example, set the 'good' and 'very good' diamonds to have the same shape. 
 
-```{r customize shapes}
+```{r customize_shapes}
 levels(dat$cut)
 p <- ggplot(data = dat, aes(x = pc1, y = pc2, color = cut, shape = cut)) +
   
@@ -267,7 +267,7 @@ p
 
 Now, for plotting the variable contributions, we can use the following code.
 
-```{r variable contributions plot}
+```{r variable_contributions_plot}
 
 vars.p <-  ggplot() +
 
@@ -309,7 +309,7 @@ vars.p
 
 And now let's put the PCA scatterplot and the variable contribution plots together using [cowplot](https://github.com/wilkelab/cowplot/blob/master/vignettes/introduction.Rmd "cowplot").
 
-```{r combined plotting}
+```{r combined_plotting}
 plot_grid(p, vars.p, rel_heights = c(1, 1.3), 
           
           labels = c("A", "B"))
