@@ -2,10 +2,11 @@
 title: "Plotting PCA results in R using FactoMineR and ggplot2"
 author: "Timothy E. Moore"
 graphics: yes
-output: 
-  html_document:
-  editor_options:
-    chunk_output_type: console
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+editor_options:
   chunk_output_type: console
 ---
 
