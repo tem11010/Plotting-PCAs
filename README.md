@@ -16,7 +16,8 @@ This is a tutorial on how to run a PCA using [FactoMineR](http://factominer.free
 
 ## Introduction
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis "Wikipedia"), "Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components."
+Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (Wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis "Wikipedia") ).
+
 
 PCA is a useful tool for exploring patterns in highly-dimensional data (data with lots of variables). It does this by constructing new variables, or principle components, that contain elements of all of the variables we start with, and can be used to identify which of our variables are best at capturing the variation in our data. 
 
